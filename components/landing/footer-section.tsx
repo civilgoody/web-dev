@@ -1,190 +1,121 @@
 import Link from "next/link"
+import { Github, Instagram, Linkedin, Twitter } from "lucide-react"
 
 export function FooterSection() {
+  const currentYear = new Date().getFullYear()
+
   return (
-    <footer className="py-12 md:py-20 border-t border-blue-900/30">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+    <footer className="py-12 md:py-16 border-t border-blue-800/20 bg-black relative">
+      <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/80 to-transparent"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
-            <Link href="/" className="flex items-center gap-2 mb-6">
-              <div className="relative w-8 h-8">
-                <div className="absolute inset-0 bg-blue-500 rounded-full blur-sm opacity-70"></div>
+            <Link href="/" className="flex items-center gap-2 mb-6 group">
+              <div className="relative w-8 h-8 group-hover:scale-110 transition-transform duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full blur-sm opacity-70 group-hover:opacity-90 transition-opacity"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-xl font-bold">W</span>
+                  <span className="text-xl font-bold text-white">W</span>
                 </div>
               </div>
-              <span className="text-xl font-bold tracking-tight">Webx</span>
+              <span className="text-xl font-bold tracking-tight text-white group-hover:text-blue-300 transition-colors">Webx</span>
             </Link>
-            <p className="text-blue-100/70 mb-6">
-              Pioneering the future of digital design with immersive web experiences that captivate and convert.
+            <p className="text-blue-200/60 text-sm leading-relaxed mb-6">
+              Architecting the future of digital interaction with immersive web experiences that captivate and convert.
             </p>
-            <div className="flex gap-4">
-              <Link href="#" className="text-blue-400 hover:text-blue-300">
-                <span className="sr-only">Twitter</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-twitter"
+            <div className="flex gap-5">
+              {[
+                { href: "#", icon: Twitter, label: "Twitter" },
+                { href: "#", icon: Instagram, label: "Instagram" },
+                { href: "#", icon: Linkedin, label: "LinkedIn" },
+                { href: "#", icon: Github, label: "GitHub" },
+              ].map((social) => (
+                <Link
+                  key={social.label}
+                  href={social.href}
+                  className="text-blue-400/70 hover:text-blue-300 transition-colors duration-300 hover:scale-110"
+                  aria-label={social.label}
                 >
-                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-                </svg>
-              </Link>
-              <Link href="#" className="text-blue-400 hover:text-blue-300">
-                <span className="sr-only">Instagram</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-instagram"
-                >
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                </svg>
-              </Link>
-              <Link href="#" className="text-blue-400 hover:text-blue-300">
-                <span className="sr-only">LinkedIn</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-linkedin"
-                >
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                  <rect width="4" height="12" x="2" y="9" />
-                  <circle cx="4" cy="4" r="2" />
-                </svg>
-              </Link>
-              <Link href="#" className="text-blue-400 hover:text-blue-300">
-                <span className="sr-only">GitHub</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-github"
-                >
-                  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                  <path d="M9 18c-4.51 2-5-2-7-2" />
-                </svg>
-              </Link>
+                  <social.icon size={20} />
+                </Link>
+              ))}
             </div>
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-6">Services</h3>
-            <ul className="space-y-4">
-              <li>
-                <Link href="#" className="text-blue-100/70 hover:text-blue-400 transition-colors">
-                  Web Design
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-blue-100/70 hover:text-blue-400 transition-colors">
-                  Web Development
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-blue-100/70 hover:text-blue-400 transition-colors">
-                  UI/UX Design
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-blue-100/70 hover:text-blue-400 transition-colors">
-                  Brand Identity
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-blue-100/70 hover:text-blue-400 transition-colors">
-                  Digital Marketing
-                </Link>
-              </li>
+            <h3 className="text-base font-semibold mb-5 text-blue-100 tracking-wide uppercase">Services</h3>
+            <ul className="space-y-3">
+              {[
+                "Web Design",
+                "Web Development",
+                "UI/UX Strategy",
+                "AI Integration",
+                "Brand Architecture",
+              ].map((service) => (
+                <li key={service}>
+                  <Link href="#services" className="text-sm text-blue-200/60 hover:text-blue-300 transition-colors duration-200">
+                    {service}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-6">Company</h3>
-            <ul className="space-y-4">
-              <li>
-                <Link href="#" className="text-blue-100/70 hover:text-blue-400 transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-blue-100/70 hover:text-blue-400 transition-colors">
-                  Our Work
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-blue-100/70 hover:text-blue-400 transition-colors">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-blue-100/70 hover:text-blue-400 transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-blue-100/70 hover:text-blue-400 transition-colors">
-                  Contact
-                </Link>
-              </li>
+            <h3 className="text-base font-semibold mb-5 text-blue-100 tracking-wide uppercase">Company</h3>
+            <ul className="space-y-3">
+              {[
+                { label: "About Us", href: "#about" },
+                { label: "Our Work", href: "#projects" },
+                { label: "Careers", href: "#" },
+                { label: "Insights Blog", href: "#" },
+                { label: "Contact Matrix", href: "#" },
+              ].map((link) => (
+                <li key={link.label}>
+                  <Link href={link.href} className="text-sm text-blue-200/60 hover:text-blue-300 transition-colors duration-200">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-6">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="text-blue-100/70">hello@webx.design</li>
-              <li className="text-blue-100/70">+1 (555) 123-4567</li>
-              <li className="text-blue-100/70">
-                123 Innovation Way
+            <h3 className="text-base font-semibold mb-5 text-blue-100 tracking-wide uppercase">Contact</h3>
+            <ul className="space-y-3 text-sm">
+              <li className="text-blue-200/60 hover:text-blue-300 transition-colors duration-200">
+                <a href="mailto:connect@webx.digital">connect@webx.digital</a>
+              </li>
+              <li className="text-blue-200/60 hover:text-blue-300 transition-colors duration-200">
+                <a href="tel:+15551234567">+1 (555) 123-4567</a>
+              </li>
+              <li className="text-blue-200/60">
+                123 Innovation Nexus
                 <br />
-                Tech District, CA 94103
+                Cyberspace District, CA 94103
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-blue-900/30 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-blue-100/50 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Webx. All rights reserved.
+        <div className="border-t border-blue-800/20 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-blue-200/40 text-xs mb-4 md:mb-0">
+            &copy; {currentYear} Webx Digital Architects. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link href="#" className="text-blue-100/50 text-sm hover:text-blue-400 transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-blue-100/50 text-sm hover:text-blue-400 transition-colors">
-              Terms of Service
-            </Link>
-            <Link href="#" className="text-blue-100/50 text-sm hover:text-blue-400 transition-colors">
-              Sitemap
-            </Link>
+            {[
+              { label: "Privacy Protocol", href: "#" },
+              { label: "Terms of Service", href: "#" },
+              { label: "Sitemap", href: "#" },
+            ].map((link) => (
+               <Link
+                key={link.label}
+                href={link.href}
+                className="text-blue-200/40 text-xs hover:text-blue-300 transition-colors duration-200"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

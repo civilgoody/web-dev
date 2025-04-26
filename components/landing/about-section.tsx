@@ -7,78 +7,79 @@ import { Button } from "@/components/ui/button"
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 md:py-32 relative">
-      <div className="absolute inset-0 z-0 opacity-10">
-        <div className="h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+    <section id="about" className="py-20 md:py-32 relative overflow-hidden">
+      {/* Refined Grid background */}
+      <div className="absolute inset-0 z-0 opacity-5">
+        <div className="h-full w-full bg-[linear-gradient(to_right,#ffffff1a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff1a_1px,transparent_1px)] bg-[size:36px_36px]"></div>
       </div>
 
-      {/* Glowing orb */}
-      <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-blue-600 rounded-full opacity-10 blur-[80px] z-0"></div>
+      {/* Glowing orb - Adjusted position */}
+      <div className="absolute top-1/2 -translate-y-1/2 left-[-10%] w-80 h-80 bg-blue-700 rounded-full opacity-15 blur-[130px] z-0 animate-pulse"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <div className="relative">
-              <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-blue-500 opacity-70"></div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-blue-500 opacity-70"></div>
-              <div className="relative overflow-hidden rounded-xl">
+            <div className="relative group">
+              {/* Removed decorative borders for cleaner look */}
+              <div className="relative overflow-hidden rounded-xl shadow-2xl shadow-blue-900/20">
                 <Image
-                  src="/placeholder.svg?height=600&width=800"
-                  alt="About Webx"
+                  src="https://images.unsplash.com/photo-1554475901-4538ddfbccc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" // Updated image
+                  alt="Webx Team - Digital Architects"
                   width={800}
                   height={600}
-                  className="w-full h-auto"
+                  className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-transparent mix-blend-overlay"></div>
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+                {/* Subtle inner glow on hover */}
+                 <div className="absolute inset-0 rounded-xl border-2 border-transparent transition-colors duration-300 group-hover:border-blue-500/40 pointer-events-none"></div>
               </div>
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
             className="space-y-6"
           >
-            <div className="inline-block px-4 py-1 mb-2 rounded-full bg-blue-900/30 border border-blue-800/50 text-blue-400 text-sm">
-              About Webx
+            <div className="inline-block px-4 py-1 mb-2 rounded-full bg-blue-900/30 border border-blue-700/50 text-blue-300 text-sm shadow-md">
+              Digital Architects
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold">Pioneering The Future Of Digital Design</h2>
-            <p className="text-blue-100/70">
-              Founded in 2023, Webx emerged from a vision to transform how brands connect with their audiences in the
-              digital realm. We're not just designers and developers – we're digital architects crafting the future.
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">Pioneering Tomorrow's Web Today</h2>
+            <p className="text-lg text-blue-100/70 leading-relaxed">
+              Established in the digital dawn of 2023, Webx arose from a vision to reshape brand interaction in the
+              virtual sphere. We are architects of the future digital landscape, not merely designers and developers.
             </p>
-            <p className="text-blue-100/70">
-              Our team of visionaries, technologists, and creatives work at the intersection of design and technology,
-              constantly pushing boundaries to create immersive digital experiences that captivate and convert.
+            <p className="text-lg text-blue-100/70 leading-relaxed">
+              Our collective of futurists, technologists, and creatives operates at the confluence of art and algorithm,
+              relentlessly innovating to forge immersive online experiences that mesmerize and mobilize.
             </p>
 
-            <div className="grid grid-cols-2 gap-6 pt-4">
-              <div>
-                <div className="text-3xl font-bold text-blue-400">45+</div>
-                <div className="text-blue-100/70">Projects Completed</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-blue-400">12</div>
-                <div className="text-blue-100/70">Design Awards</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-blue-400">98%</div>
-                <div className="text-blue-100/70">Client Satisfaction</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-blue-400">24/7</div>
-                <div className="text-blue-100/70">Support Available</div>
-              </div>
+            {/* Stats - Enhanced styling */}
+            <div className="grid grid-cols-2 gap-x-6 gap-y-8 pt-4">
+              {[ // Array for easier mapping/styling
+                { value: "45+", label: "Projects Launched" },
+                { value: "12", label: "Design Accolades" },
+                { value: "98%", label: "Client Satisfaction" },
+                { value: "24/7", label: "Support Matrix" },
+              ].map((stat) => (
+                <div key={stat.label}>
+                  <div className="text-4xl font-bold text-blue-400 tracking-tight">{stat.value}</div>
+                  <div className="text-sm text-blue-200/60 mt-1 tracking-wide uppercase font-medium">{stat.label}</div>
+                </div>
+              ))}
             </div>
 
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white mt-4">Learn More About Us</Button>
+            <Button size="lg" className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white mt-6 px-8 py-3 rounded-full text-lg group shadow-lg hover:shadow-blue-500/40 transition-all duration-300 transform hover:scale-105">
+              Explore Our Genesis
+            </Button>
           </motion.div>
         </div>
       </div>
