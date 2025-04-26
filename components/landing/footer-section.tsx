@@ -13,7 +13,7 @@ export function FooterSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
             <Link href="/" className="flex items-center gap-2 mb-6 group">
-              <div className="relative w-8 h-8 group-hover:scale-110 transition-transform duration-300">
+              <div className="relative w-8 h-8 group-hover:scale-110 transition-transform duration-100">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/70 rounded-full blur-sm opacity-90 group-hover:opacity-100 transition-opacity"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="text-xl font-bold text-primary-foreground">W</span>
@@ -34,7 +34,7 @@ export function FooterSection() {
                 <Link
                   key={social.label}
                   href={social.href}
-                  className="text-muted-foreground/70 dark:text-blue-400/70 hover:text-primary dark:hover:text-blue-300 transition-colors duration-300 hover:scale-110"
+                  className="text-muted-foreground/70 dark:text-blue-400/70 hover:text-primary dark:hover:text-blue-300 transition-colors duration-100 hover:scale-110"
                   aria-label={social.label}
                 >
                   <social.icon size={20} />
@@ -54,7 +54,7 @@ export function FooterSection() {
                 "Brand Architecture",
               ].map((service) => (
                 <li key={service}>
-                  <Link href="#services" className="text-sm text-muted-foreground dark:text-blue-200/60 hover:text-foreground dark:hover:text-blue-300 transition-colors duration-200">
+                  <Link href="#services" className="text-sm text-muted-foreground dark:text-blue-200/60 hover:text-foreground dark:hover:text-blue-300 transition-colors duration-100">
                     {service}
                   </Link>
                 </li>
@@ -73,7 +73,7 @@ export function FooterSection() {
                 { label: "Contact Matrix", href: "#" },
               ].map((link) => (
                 <li key={link.label}>
-                  <Link href={link.href} className="text-sm text-muted-foreground dark:text-blue-200/60 hover:text-foreground dark:hover:text-blue-300 transition-colors duration-200">
+                  <Link href={link.href} className="text-sm text-muted-foreground dark:text-blue-200/60 hover:text-foreground dark:hover:text-blue-300 transition-colors duration-100">
                     {link.label}
                   </Link>
                 </li>
@@ -84,10 +84,10 @@ export function FooterSection() {
           <div>
             <h3 className="text-base font-semibold mb-5 text-foreground dark:text-blue-100 tracking-wide uppercase">Contact</h3>
             <ul className="space-y-3 text-sm">
-              <li className="text-muted-foreground dark:text-blue-200/60 hover:text-foreground dark:hover:text-blue-300 transition-colors duration-200">
+              <li className="text-muted-foreground dark:text-blue-200/60 hover:text-foreground dark:hover:text-blue-300 transition-colors duration-100">
                 <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
               </li>
-              <li className="text-muted-foreground dark:text-blue-200/60 hover:text-foreground dark:hover:text-blue-300 transition-colors duration-200">
+              <li className="text-muted-foreground dark:text-blue-200/60 hover:text-foreground dark:hover:text-blue-300 transition-colors duration-75">
                 <a href="tel:+15551234567">+1 (555) 123-4567</a>
               </li>
               <li className="text-muted-foreground dark:text-blue-200/60">

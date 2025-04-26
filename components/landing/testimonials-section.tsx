@@ -40,7 +40,7 @@ export function TestimonialsSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.4 }}
           className="max-w-xl mx-auto text-center mb-16"
         >
           <div className="inline-block px-4 py-1 mb-4 rounded-full bg-primary/10 dark:bg-blue-900/30 border border-primary/20 dark:border-blue-700/50 text-primary dark:text-blue-300 text-sm shadow-sm dark:shadow-md">
@@ -59,7 +59,7 @@ export function TestimonialsSection() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
             >
               <Card className="bg-card/90 dark:bg-gradient-to-br dark:from-black/40 dark:to-blue-950/20 border border-border dark:border-blue-800/30 backdrop-blur-md p-8 h-full flex flex-col transition-all duration-300 hover:border-primary/30 dark:hover:border-blue-600/50 hover:bg-card dark:hover:bg-blue-950/30 shadow-md hover:shadow-lg dark:hover:shadow-xl dark:hover:shadow-blue-600/10">
                 <div className="mb-5 text-primary/60 dark:text-blue-500 flex-shrink-0">

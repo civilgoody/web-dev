@@ -37,7 +37,7 @@ export function FeaturedProjectsSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.4 }}
           className="max-w-xl mx-auto text-center mb-16"
         >
           <Badge variant="outline" className="mb-4 text-sm border-primary/30 bg-primary/5 text-primary">
@@ -56,7 +56,7 @@ export function FeaturedProjectsSection() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
               className="group relative transition-transform duration-300 ease-out hover:scale-[1.02]"
             >
               <Card className="overflow-hidden transition-all duration-300 group-hover:shadow-lg group-hover:border-primary/30 glass">

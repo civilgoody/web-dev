@@ -42,7 +42,7 @@ export function HeroSection({ heroRef, mousePosition, y, opacity }: HeroSectionP
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3 }}
             className="inline-block px-4 py-1 mb-6 rounded-full bg-primary/10 dark:bg-blue-900/30 border border-primary/20 dark:border-blue-700/50 text-primary dark:text-blue-300 text-sm shadow-sm dark:shadow-md"
           >
             Redefining Digital Experiences
@@ -52,7 +52,7 @@ export function HeroSection({ heroRef, mousePosition, y, opacity }: HeroSectionP
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
             className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground via-foreground/80 to-foreground dark:from-blue-100 dark:via-white dark:to-blue-200 tracking-tight"
           >
             Step Into The Future Of Web Design
@@ -62,7 +62,7 @@ export function HeroSection({ heroRef, mousePosition, y, opacity }: HeroSectionP
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
+            transition={{ duration: 0.4, delay: 0.4 }}
             className="text-lg md:text-xl text-muted-foreground dark:text-blue-100/70 mb-10 max-w-2xl mx-auto"
           >
             We craft immersive digital experiences that blend cutting-edge technology with visionary design. Your
@@ -72,7 +72,7 @@ export function HeroSection({ heroRef, mousePosition, y, opacity }: HeroSectionP
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.6 }}
+            transition={{ duration: 0.4, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             {/* Primary Button - Use primary colors */}
@@ -96,7 +96,7 @@ export function HeroSection({ heroRef, mousePosition, y, opacity }: HeroSectionP
           <motion.div
             initial={{ y: 100, opacity: 0, rotate: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
             whileHover={{ scale: 1.1 }}
             className="absolute left-[10%] top-[20%] w-20 h-20 md:w-28 md:h-28 bg-gradient-to-br from-blue-500/70 to-blue-300/70 dark:from-blue-600/70 dark:to-blue-400/70 rounded-2xl rotate-12 backdrop-blur-sm dark:backdrop-blur-md shadow-lg dark:shadow-xl"
           >
@@ -109,7 +109,7 @@ export function HeroSection({ heroRef, mousePosition, y, opacity }: HeroSectionP
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
+            transition={{ duration: 0.6, delay: 1 }}
             whileHover={{ scale: 1.1 }}
             className="absolute left-[35%] top-[50%] w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-indigo-500/70 to-purple-400/70 dark:from-indigo-600/70 dark:to-purple-500/70 rounded-full backdrop-blur-sm dark:backdrop-blur-md shadow-md dark:shadow-lg"
           >
@@ -122,7 +122,7 @@ export function HeroSection({ heroRef, mousePosition, y, opacity }: HeroSectionP
           <motion.div
             initial={{ y: 100, opacity: 0, rotate: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 1.2 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
             whileHover={{ scale: 1.1 }}
             className="absolute right-[30%] top-[30%] w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-blue-400/70 to-indigo-500/70 dark:from-blue-500/70 dark:to-indigo-600/70 rounded-3xl -rotate-12 backdrop-blur-sm dark:backdrop-blur-md shadow-lg dark:shadow-xl"
           >
@@ -135,7 +135,7 @@ export function HeroSection({ heroRef, mousePosition, y, opacity }: HeroSectionP
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 1.4 }}
+            transition={{ duration: 0.6, delay: 1.4 }}
             whileHover={{ scale: 1.1 }}
             className="absolute right-[15%] top-[60%] w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-blue-300/70 to-purple-500/70 dark:from-blue-400/70 dark:to-purple-600/70 rounded-lg rotate-45 backdrop-blur-sm dark:backdrop-blur-md shadow-md dark:shadow-lg"
           >
@@ -152,7 +152,7 @@ export function HeroSection({ heroRef, mousePosition, y, opacity }: HeroSectionP
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
+        transition={{ delay: 1.6, duration: 0.5 }}
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10"
       >
         <span className="text-sm text-muted-foreground dark:text-blue-300/70 mb-2">Scroll to explore</span>

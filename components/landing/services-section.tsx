@@ -39,7 +39,7 @@ export function ServicesSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.4 }}
           className="max-w-xl mx-auto text-center mb-16"
         >
           <div className="inline-block px-4 py-1 mb-4 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm shadow-[0_0_10px_rgba(59,130,246,0.1)]">
@@ -58,7 +58,7 @@ export function ServicesSection() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
             >
               <Card className="bg-card/60 border-2 relative overflow-hidden border-primary/30 backdrop-blur-md p-8 h-full group transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] dark:hover:shadow-[0_0_25px_rgba(59,130,246,0.5)]">
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-700 bg-feature-gradient"></div>

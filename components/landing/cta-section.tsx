@@ -23,7 +23,7 @@ export function CtaSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.4 }}
           className="max-w-4xl mx-auto bg-gradient-to-br from-card via-background to-card/90 dark:from-blue-950/30 dark:via-black/40 dark:to-blue-950/20 rounded-2xl p-8 md:p-12 border border-border dark:border-blue-800/30 backdrop-blur-lg shadow-lg dark:shadow-2xl dark:shadow-blue-900/10"
         >
           <div className="text-center mb-8">
