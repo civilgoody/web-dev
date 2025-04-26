@@ -9,6 +9,7 @@ import { FeaturedProjectsSection } from "@/components/landing/featured-projects-
 import { FooterSection } from "@/components/landing/footer-section"
 import { HeroSection } from "@/components/landing/hero-section"
 import { NavigationSection } from "@/components/landing/navigation-section"
+import { PricingSection } from "@/components/landing/pricing-section"
 import { ServicesSection } from "@/components/landing/services-section"
 import { TestimonialsSection } from "@/components/landing/testimonials-section"
 
@@ -50,6 +51,8 @@ export default function LandingPage() {
       <AboutSection />
 
       <TestimonialsSection />
+
+      <PricingSection />
 
       <CtaSection />
 

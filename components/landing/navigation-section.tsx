@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 
 import { Button } from "@/components/ui/button"
-import { BRAND_NAME } from "@/lib/constants"
+import { BRAND_NAME, NAV_LINKS } from "@/lib/constants"
 
 interface NavigationSectionProps {
   isMenuOpen: boolean
@@ -30,18 +30,15 @@ export function NavigationSection({ isMenuOpen, setIsMenuOpen }: NavigationSecti
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <Link href="#projects" className="text-sm text-muted-foreground hover:text-foreground transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
-            Projects
-          </Link>
-          <Link href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
-            Services
-          </Link>
-          <Link href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
-            About
-          </Link>
-          <Link href="#testimonials" className="text-sm text-muted-foreground hover:text-foreground transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
-            Testimonials
-          </Link>
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+            >
+              {link.label}
+            </Link>
+          ))}
           <Button size="sm" className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/80 hover:to-primary text-primary-foreground rounded-full px-5 shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
             Get in Touch
           </Button>
@@ -67,34 +64,16 @@ export function NavigationSection({ isMenuOpen, setIsMenuOpen }: NavigationSecti
           className="md:hidden absolute top-full left-0 right-0 bg-black/90 backdrop-blur-md border-b border-blue-800/20 shadow-lg"
         >
           <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
-            <Link
-              href="#projects"
-              className="text-lg py-2 text-blue-100/80 hover:text-blue-300 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Projects
-            </Link>
-            <Link
-              href="#services"
-              className="text-lg py-2 text-blue-100/80 hover:text-blue-300 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Services
-            </Link>
-            <Link
-              href="#about"
-              className="text-lg py-2 text-blue-100/80 hover:text-blue-300 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              About
-            </Link>
-            <Link
-              href="#testimonials"
-              className="text-lg py-2 text-blue-100/80 hover:text-blue-300 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Testimonials
-            </Link>
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-lg py-2 text-blue-100/80 hover:text-blue-300 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
             <Button
               className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white w-full mt-4 py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
               onClick={() => setIsMenuOpen(false)}
