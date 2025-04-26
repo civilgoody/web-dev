@@ -6,22 +6,22 @@ export function FooterSection() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="py-12 md:py-16 border-t border-blue-800/20 bg-black relative">
-      <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/80 to-transparent"></div>
+    <footer className="py-12 md:py-16 border-t border-border bg-background dark:bg-black">
+      <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-background/80 dark:from-black/80 to-transparent pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
             <Link href="/" className="flex items-center gap-2 mb-6 group">
               <div className="relative w-8 h-8 group-hover:scale-110 transition-transform duration-300">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full blur-sm opacity-70 group-hover:opacity-90 transition-opacity"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/70 rounded-full blur-sm opacity-90 group-hover:opacity-100 transition-opacity"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-xl font-bold text-white">W</span>
+                  <span className="text-xl font-bold text-primary-foreground">W</span>
                 </div>
               </div>
-              <span className="text-xl font-bold tracking-tight text-white group-hover:text-blue-300 transition-colors">{BRAND_NAME}</span>
+              <span className="text-xl font-bold tracking-tight text-foreground group-hover:text-primary transition-colors">{BRAND_NAME}</span>
             </Link>
-            <p className="text-blue-200/60 text-sm leading-relaxed mb-6">
+            <p className="text-muted-foreground dark:text-blue-200/60 text-sm leading-relaxed mb-6">
               Architecting the future of digital interaction with immersive web experiences that captivate and convert.
             </p>
             <div className="flex gap-5">
@@ -34,7 +34,7 @@ export function FooterSection() {
                 <Link
                   key={social.label}
                   href={social.href}
-                  className="text-blue-400/70 hover:text-blue-300 transition-colors duration-300 hover:scale-110"
+                  className="text-muted-foreground/70 dark:text-blue-400/70 hover:text-primary dark:hover:text-blue-300 transition-colors duration-300 hover:scale-110"
                   aria-label={social.label}
                 >
                   <social.icon size={20} />
@@ -44,7 +44,7 @@ export function FooterSection() {
           </div>
 
           <div>
-            <h3 className="text-base font-semibold mb-5 text-blue-100 tracking-wide uppercase">Services</h3>
+            <h3 className="text-base font-semibold mb-5 text-foreground dark:text-blue-100 tracking-wide uppercase">Services</h3>
             <ul className="space-y-3">
               {[
                 "Web Design",
@@ -54,7 +54,7 @@ export function FooterSection() {
                 "Brand Architecture",
               ].map((service) => (
                 <li key={service}>
-                  <Link href="#services" className="text-sm text-blue-200/60 hover:text-blue-300 transition-colors duration-200">
+                  <Link href="#services" className="text-sm text-muted-foreground dark:text-blue-200/60 hover:text-foreground dark:hover:text-blue-300 transition-colors duration-200">
                     {service}
                   </Link>
                 </li>
@@ -63,7 +63,7 @@ export function FooterSection() {
           </div>
 
           <div>
-            <h3 className="text-base font-semibold mb-5 text-blue-100 tracking-wide uppercase">Company</h3>
+            <h3 className="text-base font-semibold mb-5 text-foreground dark:text-blue-100 tracking-wide uppercase">Company</h3>
             <ul className="space-y-3">
               {[
                 { label: "About Us", href: "#about" },
@@ -73,7 +73,7 @@ export function FooterSection() {
                 { label: "Contact Matrix", href: "#" },
               ].map((link) => (
                 <li key={link.label}>
-                  <Link href={link.href} className="text-sm text-blue-200/60 hover:text-blue-300 transition-colors duration-200">
+                  <Link href={link.href} className="text-sm text-muted-foreground dark:text-blue-200/60 hover:text-foreground dark:hover:text-blue-300 transition-colors duration-200">
                     {link.label}
                   </Link>
                 </li>
@@ -82,15 +82,15 @@ export function FooterSection() {
           </div>
 
           <div>
-            <h3 className="text-base font-semibold mb-5 text-blue-100 tracking-wide uppercase">Contact</h3>
+            <h3 className="text-base font-semibold mb-5 text-foreground dark:text-blue-100 tracking-wide uppercase">Contact</h3>
             <ul className="space-y-3 text-sm">
-              <li className="text-blue-200/60 hover:text-blue-300 transition-colors duration-200">
+              <li className="text-muted-foreground dark:text-blue-200/60 hover:text-foreground dark:hover:text-blue-300 transition-colors duration-200">
                 <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
               </li>
-              <li className="text-blue-200/60 hover:text-blue-300 transition-colors duration-200">
+              <li className="text-muted-foreground dark:text-blue-200/60 hover:text-foreground dark:hover:text-blue-300 transition-colors duration-200">
                 <a href="tel:+15551234567">+1 (555) 123-4567</a>
               </li>
-              <li className="text-blue-200/60">
+              <li className="text-muted-foreground dark:text-blue-200/60">
                 123 Innovation Nexus
                 <br />
                 Cyberspace District, CA 94103
@@ -99,8 +99,8 @@ export function FooterSection() {
           </div>
         </div>
 
-        <div className="border-t border-blue-800/20 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-blue-200/40 text-xs mb-4 md:mb-0">
+        <div className="border-t border-border dark:border-blue-800/20 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-muted-foreground/70 dark:text-blue-200/40 text-xs mb-4 md:mb-0">
             &copy; {currentYear} {BRAND_NAME} Digital Architects. All rights reserved.
           </p>
           <div className="flex gap-6">
@@ -112,7 +112,7 @@ export function FooterSection() {
                <Link
                 key={link.label}
                 href={link.href}
-                className="text-blue-200/40 text-xs hover:text-blue-300 transition-colors duration-200"
+                className="text-muted-foreground/70 dark:text-blue-200/40 text-xs hover:text-foreground dark:hover:text-blue-300 transition-colors duration-200"
               >
                 {link.label}
               </Link>

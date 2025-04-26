@@ -38,7 +38,7 @@ export default function LandingPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
+    <div className="min-h-screen overflow-hidden">
       <NavigationSection isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 
       <HeroSection heroRef={heroRef} mousePosition={mousePosition} y={y} opacity={opacity} />

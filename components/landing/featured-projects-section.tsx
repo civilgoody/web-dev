@@ -5,6 +5,8 @@ import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { Card } from "@/components/ui/card"
 
 const projects = [
   {
@@ -35,7 +37,7 @@ const projects = [
 
 export function FeaturedProjectsSection() {
   return (
-    <section id="projects" className="py-20 md:py-32 relative bg-gradient-to-b from-black to-blue-950/40 border-y border-blue-800/20">
+    <section id="projects" className="py-20 md:py-32 relative bg-background border-y border-border">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,11 +46,11 @@ export function FeaturedProjectsSection() {
           transition={{ duration: 0.7 }}
           className="max-w-xl mx-auto text-center mb-16"
         >
-          <div className="inline-block px-4 py-1 mb-4 rounded-full bg-blue-900/30 border border-blue-700/50 text-blue-300 text-sm shadow-md">
+          <Badge variant="outline" className="mb-4 text-sm">
             Our Portfolio
-          </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Featured Projects</h2>
-          <p className="text-lg text-blue-100/60">
+          </Badge>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight text-foreground">Featured Projects</h2>
+          <p className="text-lg text-muted-foreground">
             Exploring the frontiers of digital innovation through our client collaborations.
           </p>
         </motion.div>
@@ -63,33 +65,33 @@ export function FeaturedProjectsSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative"
             >
-              <div className="relative overflow-hidden rounded-xl shadow-lg transition-shadow duration-300 group-hover:shadow-blue-600/20">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-80"></div>
-                <div className="absolute inset-0 rounded-xl border-2 border-transparent transition-colors duration-300 group-hover:border-blue-500/50 z-20 pointer-events-none"></div>
-                <Image
-                  src={project.image || "/placeholder-futuristic.svg"}
-                  alt={project.title}
-                  width={800}
-                  height={600}
-                  className="w-full h-[300px] md:h-[350px] object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transition-transform duration-300 group-hover:translate-y-[-10px]">
-                  <div className="text-blue-300 text-sm mb-1 font-medium tracking-wide opacity-80 group-hover:opacity-100 transition-opacity">
+              <Card className="overflow-hidden transition-all duration-300 group-hover:shadow-lg group-hover:border-primary/30">
+                <div className="relative aspect-video overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/60 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-80"></div>
+                  <Image
+                    src={project.image || "/placeholder-futuristic.svg"}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6 z-20 relative bg-card">
+                  <div className="text-primary text-sm mb-1 font-medium tracking-wide opacity-80 group-hover:opacity-100 transition-opacity">
                     {project.category}
                   </div>
-                  <h3 className="text-2xl font-semibold mb-2 text-white tracking-tight">{project.title}</h3>
-                  <p className="text-blue-100/70 mb-4 text-[15px] leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                  <h3 className="text-2xl font-semibold mb-2 text-card-foreground tracking-tight">{project.title}</h3>
+                  <p className="text-muted-foreground mb-4 text-[15px] leading-relaxed transition-opacity duration-300 group-hover:opacity-80">
                     {project.description}
                   </p>
                   <Button
-                    variant="outline"
+                    variant="default"
                     size="sm"
-                    className="border-blue-600/70 text-blue-200 hover:bg-blue-900/30 hover:border-blue-400/80 rounded-full px-4 py-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200"
+                    className="rounded-full px-4 py-1.5 transition-opacity duration-300"
                   >
                     View Project <ArrowRight className="ml-1.5 h-4 w-4" />
                   </Button>
                 </div>
-              </div>
+              </Card>
             </motion.div>
           ))}
         </div>
@@ -98,7 +100,7 @@ export function FeaturedProjectsSection() {
           <Button
             size="lg"
             variant="outline"
-            className="border-blue-600 text-blue-100 hover:bg-blue-900/20 hover:border-blue-400 px-8 py-3 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md"
+            className="px-8 py-3 rounded-full text-lg transition-all duration-300 transform hover:scale-105"
           >
             View All Projects
             <ArrowRight className="ml-2 h-4 w-4" />

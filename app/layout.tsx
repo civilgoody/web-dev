@@ -22,7 +22,7 @@ export default function RootLayout({
         {/* Remove previous Inter font link if necessary - though next/font handles it */}
       </head>
       <body className={manrope.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true} disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>
