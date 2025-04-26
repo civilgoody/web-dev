@@ -69,7 +69,7 @@ export function ServicesSection() {
                 <p className="text-muted-foreground mb-6 text-[15px] leading-relaxed">{service.description}</p>
                 <Link
                   href="#"
-                  className="text-primary font-medium text-sm flex items-center group-hover:text-primary transition-all duration-300 relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-px before:bg-primary/70 group-hover:before:w-full before:transition-all before:duration-300"
+                  className="text-primary font-medium text-sm flex items-center group-hover:text-primary/80 transition-colors duration-300"
                 >
                   Learn more
                   <ArrowRight className="ml-1.5 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

@@ -46,7 +46,7 @@ export function TestimonialsSection() {
           <div className="inline-block px-4 py-1 mb-4 rounded-full bg-primary/10 dark:bg-blue-900/30 border border-primary/20 dark:border-blue-700/50 text-primary dark:text-blue-300 text-sm shadow-sm dark:shadow-md">
             Voices from the Grid
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight text-foreground">Client Testimonials</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight bg-gradient-to-r from-primary/90 to-primary/70 text-transparent bg-clip-text dark:text-glow">Client Testimonials</h2>
           <p className="text-lg text-muted-foreground dark:text-blue-100/60">
             Hear from partners who've navigated the digital frontier with {BRAND_NAME}.
           </p>

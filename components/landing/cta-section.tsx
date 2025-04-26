@@ -27,7 +27,7 @@ export function CtaSection() {
           className="max-w-4xl mx-auto bg-gradient-to-br from-card via-background to-card/90 dark:from-blue-950/30 dark:via-black/40 dark:to-blue-950/20 rounded-2xl p-8 md:p-12 border border-border dark:border-blue-800/30 backdrop-blur-lg shadow-lg dark:shadow-2xl dark:shadow-blue-900/10"
         >
           <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 tracking-tight text-foreground">Ready to Transcend the Digital Norm?</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 tracking-tight bg-gradient-to-r from-primary/90 to-primary/70 text-transparent bg-clip-text dark:text-glow">Ready to Transcend the Digital Norm?</h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Collaborate with {BRAND_NAME} to architect a groundbreaking digital experience. Your brand's future evolution
               starts now.

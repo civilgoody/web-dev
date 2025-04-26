@@ -55,7 +55,7 @@ export function AboutSection() {
               Digital Architects
             </div>
             {/* Heading - Use foreground */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">Pioneering Tomorrow's Web Today</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-primary/90 to-primary/70 text-transparent bg-clip-text dark:text-glow">Pioneering Tomorrow's Web Today</h2>
             {/* Paragraphs - Use muted-foreground */}
             <p className="text-lg text-muted-foreground leading-relaxed">
               Established in the digital dawn of 2023, {BRAND_NAME} arose from a vision to reshape brand interaction in the
