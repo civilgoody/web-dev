@@ -4,26 +4,27 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 
 import { Card } from "@/components/ui/card"
+import { BRAND_NAME } from "@/lib/constants"
 
 const testimonials = [
   {
     quote:
-      "Webx didn't just build a website; they architected a digital dimension for our brand. Their foresight and execution are unparalleled.",
-    author: "Alex Chen",
+      `${BRAND_NAME} didn't just build a website; they architected a digital dimension for our brand. Their foresight and execution are unparalleled.`,
+    author: "Alex Thompson",
     position: "CEO, NeoTech Dynamics",
     image: "https://avatar.iran.liara.run/public/boy?username=Alex+Chen",
   },
   {
     quote:
-      "Collaborating with Webx felt like stepping into the future. Their blend of artistry and technology propelled our strategy lightyears ahead.",
-    author: "Dr. Sarah Johnson",
+      `Collaborating with ${BRAND_NAME} felt like stepping into the future. Their blend of artistry and technology propelled our strategy lightyears ahead.`,
+    author: "Samantha Reed",
     position: "Chief Innovation Officer, Quantum Solutions",
     image: "https://avatar.iran.liara.run/public/girl?username=Sarah+Johnson",
   },
   {
     quote:
-      "The digital experience Webx crafted isn't just engaging—it's transformative. We saw a 45% uplift in core metric conversions post-launch.",
-    author: "Michael Rodriguez",
+      `The digital experience ${BRAND_NAME} crafted isn't just engaging—it's transformative. We saw a 45% uplift in core metric conversions post-launch.`,
+    author: "Jordan Maxwell",
     position: "Product Architect, Cyberwave Systems",
     image: "https://i.pravatar.cc/150?u=Michael+Rodriguez",
   },
@@ -45,7 +46,7 @@ export function TestimonialsSection() {
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Client Testimonials</h2>
           <p className="text-lg text-blue-100/60">
-            Hear from partners who've navigated the digital frontier with Webx.
+            Hear from partners who've navigated the digital frontier with {BRAND_NAME}.
           </p>
         </motion.div>
 

@@ -2,11 +2,12 @@ import type { Metadata } from "next"
 import "./globals.css"
 import { Manrope } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
+import { BRAND_NAME, BRAND_TAGLINE } from "@/lib/constants"
 
 const manrope = Manrope({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] })
 
 export const metadata: Metadata = {
-  title: "Webx - Future Web Design",
+  title: `${BRAND_NAME} - ${BRAND_TAGLINE}`,
   description: "Crafting immersive digital experiences for the modern web.",
 }
 

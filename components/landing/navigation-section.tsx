@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { BRAND_NAME } from "@/lib/constants"
 
 interface NavigationSectionProps {
   isMenuOpen: boolean
@@ -23,7 +24,7 @@ export function NavigationSection({ isMenuOpen, setIsMenuOpen }: NavigationSecti
               <span className="text-xl font-bold text-white">W</span>
             </div>
           </div>
-          <span className="text-xl font-bold tracking-tight text-white group-hover:text-blue-300 transition-colors">Webx</span>
+          <span className="text-xl font-bold tracking-tight text-white group-hover:text-blue-300 transition-colors">{BRAND_NAME}</span>
         </Link>
 
         {/* Desktop Navigation */}

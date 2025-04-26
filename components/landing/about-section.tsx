@@ -4,6 +4,7 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 
 import { Button } from "@/components/ui/button"
+import { BRAND_NAME } from "@/lib/constants"
 
 export function AboutSection() {
   return (
@@ -29,7 +30,7 @@ export function AboutSection() {
               <div className="relative overflow-hidden rounded-xl shadow-2xl shadow-blue-900/20">
                 <Image
                   src="https://images.unsplash.com/photo-1554475901-4538ddfbccc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" // Updated image
-                  alt="Webx Team - Digital Architects"
+                  alt={`${BRAND_NAME} Team - Digital Architects`}
                   width={800}
                   height={600}
                   className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
@@ -54,7 +55,7 @@ export function AboutSection() {
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">Pioneering Tomorrow's Web Today</h2>
             <p className="text-lg text-blue-100/70 leading-relaxed">
-              Established in the digital dawn of 2023, Webx arose from a vision to reshape brand interaction in the
+              Established in the digital dawn of 2023, {BRAND_NAME} arose from a vision to reshape brand interaction in the
               virtual sphere. We are architects of the future digital landscape, not merely designers and developers.
             </p>
             <p className="text-lg text-blue-100/70 leading-relaxed">

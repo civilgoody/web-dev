@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Github, Instagram, Linkedin, Twitter } from "lucide-react"
+import { BRAND_NAME, CONTACT_EMAIL } from "@/lib/constants"
 
 export function FooterSection() {
   const currentYear = new Date().getFullYear()
@@ -18,7 +19,7 @@ export function FooterSection() {
                   <span className="text-xl font-bold text-white">W</span>
                 </div>
               </div>
-              <span className="text-xl font-bold tracking-tight text-white group-hover:text-blue-300 transition-colors">Webx</span>
+              <span className="text-xl font-bold tracking-tight text-white group-hover:text-blue-300 transition-colors">{BRAND_NAME}</span>
             </Link>
             <p className="text-blue-200/60 text-sm leading-relaxed mb-6">
               Architecting the future of digital interaction with immersive web experiences that captivate and convert.
@@ -84,7 +85,7 @@ export function FooterSection() {
             <h3 className="text-base font-semibold mb-5 text-blue-100 tracking-wide uppercase">Contact</h3>
             <ul className="space-y-3 text-sm">
               <li className="text-blue-200/60 hover:text-blue-300 transition-colors duration-200">
-                <a href="mailto:connect@webx.digital">connect@webx.digital</a>
+                <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
               </li>
               <li className="text-blue-200/60 hover:text-blue-300 transition-colors duration-200">
                 <a href="tel:+15551234567">+1 (555) 123-4567</a>
@@ -100,7 +101,7 @@ export function FooterSection() {
 
         <div className="border-t border-blue-800/20 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-blue-200/40 text-xs mb-4 md:mb-0">
-            &copy; {currentYear} Webx Digital Architects. All rights reserved.
+            &copy; {currentYear} {BRAND_NAME} Digital Architects. All rights reserved.
           </p>
           <div className="flex gap-6">
             {[

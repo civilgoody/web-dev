@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import { BRAND_NAME } from "@/lib/constants"
 
 export function CtaSection() {
   return (
@@ -28,7 +29,7 @@ export function CtaSection() {
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 tracking-tight">Ready to Transcend the Digital Norm?</h2>
             <p className="text-lg md:text-xl text-blue-100/70 max-w-2xl mx-auto leading-relaxed">
-              Collaborate with Webx to architect a groundbreaking digital experience. Your brand's future evolution
+              Collaborate with {BRAND_NAME} to architect a groundbreaking digital experience. Your brand's future evolution
               starts now.
             </p>
           </div>
